@@ -1,7 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addNewEmployee } from '../../reducers/employeeReducer'
-import constants from '../../helper/constants';
 
 
 class Tasks extends React.Component {
