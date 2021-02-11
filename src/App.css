@@ -13,6 +13,34 @@
   }
 }
 
+.form-main {
+  height: 300px;
+    width: 300px;
+}
+
+h3{
+  text-align: center;
+  border: 3px solid #1d2325;
+    /* background: border-box; */
+    color: white;
+    background-color: black;
+}
+h4{
+  text-align: center;
+  color: crimson;
+}
+
+.btns {
+  text-align: center;
+}
+.inputs {
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 5%;
+}
+.cancel-button {
+  margin-left: 30%;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -27,20 +55,36 @@
 .App-link {
   color: #61dafb;
 }
-
-button.link { background:none;border:none; }
+.dev-info {
+  text-align: right;
+  margin: 20px;
+}
+.search-box {
+  margin-left: 2%;
+}
+button.link { height: 34px;
+  line-height: 32px;
+  width: 48%;
+  max-width: 200px;
+  background-color: darkcyan;
+  font-size: .8rem;
+  border-radius: 10px;
+  padding: 0 2px;
+  font-weight: 600; }
 
 .grid-container {
-  margin-left: 300px;
+  margin-left: 50px;
   margin-right: 50px;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 50px;
+  background-color: #acc2d4;
+  padding: 20px;
+  border-radius: 20px;
 }
 .grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(230 229 220 / 80%);
+  border-radius: 20px;
   text-align: center;
   padding: 20px 0;
   font-size: 30px;

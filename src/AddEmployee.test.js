@@ -1,10 +1,20 @@
 import { render,fireEvent, screen, cleanup } from '@testing-library/react';
-import App from './App';
+import AddEmployee from '../src/components/employees/addEmployee';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import React from 'react';
 
 afterEach(cleanup);
+
+it('should not call AddEmp if length of text is 0', () => {
+  const mockAddEMP = jest.fn()
+  render(<AddEmployee valueAddedCallback={mockAddEMP} />)
+
+  fireEvent.change(screen.getByPlaceholderText(/Name/i), {
+    target: { value: '' }
+  })
+  expect(mockAddTodo).toHaveBeenCalledTimes(0)
+})
 
 const initialEmployees=
   [];
@@ -24,20 +34,11 @@ function renderWithRedux(Component,
     };
   }
 
-
-  
-it("initially the list is blank", ()=>{
-  const {getByText,getByTestId, getById} = renderWithRedux(<App />);
+it("Placeholders are shown properly.", ()=>{
+  const {getByText,getByTestId, getById} = renderWithRedux(<AddEmployee />);
   // const linkElement = screen.getByTestId("employee-list");
   // expect(linkElement).toBeInTheDocument();
-  expect(getByTestId("employee-list")).toHaveTextContent('')
+  expect(getByText("emp-form")).toHaveTextContent('Add')
 
 });
 
-
-
-// test('renders learn react link', () => {
-//   render(<App />);
-//   const linkElement = screen.getByText(/learn react/i);
-//   expect(linkElement).toBeInTheDocument();
-// });
