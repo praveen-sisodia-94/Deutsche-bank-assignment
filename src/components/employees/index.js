@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {getEmployees} from '../../reducers/employeeReducer'
 
 class EmployeeList extends React.Component {
 constructor(props) {
@@ -8,7 +9,9 @@ constructor(props) {
      }
 
 }
-
+componentDidMount () {
+   // this.props.dispatch(getEmployees());
+}
     render() {
         return (
             <div>
